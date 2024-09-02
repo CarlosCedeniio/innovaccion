@@ -1,31 +1,1144 @@
 <div class="full-width full-height">
-  <div class="app-header display-flex -row -center">
-    <span class="header-title display-flex -center">
-      Angular Chatbot Example
-    </span>
-    <div class="header-actions display-flex -center">
-        <div class="chat-buttons">
-          <div class="button-container">
-            <input id="fixed-chat" type="radio" name="display-button" value="{{displayType.Fixed}}" routerLink="{{displayType.Fixed}}" [checked]="display === displayType.Fixed"/>
-            <label for="fixed-chat">Fixed</label>
-          </div>
-          <div class="button-container">
-            <input id="collapsible-chat" type="radio" name="display-button" value="{{displayType.Collapsible}}" routerLink="{{displayType.Collapsible}}" [checked]="display === displayType.Collapsible"/>
-            <label for="collapsible-chat">Collapsible</label>
-          </div>
-        </div>
-    </div>
-    <div class="app-socials display-flex full-height">
-      <div class="socials-icons display-flex -column -center full-height">
-        <div class="display-flex -center">
-          <img class="icon" src="./assets/github-logo.png" (click)="onClickRedirectGithub()">
-        </div>
-        <div class="display-flex -center">
-          <img class="icon" src="./assets/mail.png" [cdkCopyToClipboard]="email" (click)="onClickCopyEmail()">
-          <span class="copy-alert" *ngIf="copyEmail">Copied email!</span>
-        </div>
-      </div>
+	<header id="header" class="header-v2"> 
+            
+
+		<div class="sticky-wrapper"><div class="gv-sticky-menu d-none d-sm-none d-lg-block">
+		   <div class="topbar">
+	   <div class="container-fluid">
+		 <div class="topbar-inner">
+		   <nav class="navbar navbar-expand-sm section-top">
+			 <div class="container-fluid d-flex align-items-end flex-column menu-rs">
+			   <ul class="navbar-nav">
+				 <li class="nav-item">
+				   <a class="btn btn-outline-menu " href="https://www.espol.edu.ec" target="_blank">Ir a ESPOL</a>
+				 </li>
+				 <li class="nav-item border-right">
+				   <a class="btn btn-outline-menu mx-2" href="https://www.academico.espol.edu.ec/" target="_blank">Académico</a>
+				 </li>
+	 
+				 <li class="nav-item ">
+				   <a class="nav-link" href="https://www.facebook.com/AdmisionESPOL" aria-label="link  Facebook Admisiones ESPOL" target="_blank">
+					 <i class="fab fa-facebook-f"></i></a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="https://www.instagram.com/admisiones_espol/" aria-label="link instagram Admisiones ESPOL" target="_blank">
+					 <i class="fab fa-instagram"></i>
+				   </a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="https://twitter.com/AdmisionesESPOL" aria-label="link Twitter ESPOL" target="_blank">
+					 <i alt="link Twitter " class="img-fluid icon-rs-head">
+					   <svg id="svg_x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.06 128.96">
+						 <defs>
+						 </defs>
+						 <g id="layer1">
+						   <path id="path1009" class="iconx-header" d="m6.98,4.55l49.56,66.27L6.67,124.71h11.23l43.67-47.17,35.28,47.17h38.2l-52.35-70L129.11,4.55h-11.23l-40.21,43.45L45.18,4.55H6.98Zm16.51,8.27h17.55l77.49,103.61h-17.55L23.49,12.82Z"></path>
+						 </g>
+					   </svg>
+					 </i>
+				   </a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="https://www.youtube.com/user/espol50" aria-label="link Youtube ESPOL" target="_blank">
+					 <i class="fab fa-youtube"></i>
+				   </a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="https://www.linkedin.com/company/espol/" aria-label="link Linkedin ESPOL" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="https://www.flickr.com/photos/127614862@N04" aria-label="link Flickr ESPOL" target="_blank"><i class="fab fa-flickr"></i></a>
+				 </li>
+				 <li class="nav-item border-right mr-2">
+				   <a href="https://www.tiktok.com/@espol_oficial" target="_blank" class="nav-link">
+					 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 448 512"><path fill="currentColor" d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"></path></svg>
+				   </a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="https://aulavirtual.espol.edu.ec/welcome.html" aria-label="link AULA VIRTUAL " target="_blank">
+					 <img id="ico-virtual" class="pt-1" src="/assets/aula_virtual.svg" width="28" height="20" alt="AULA VIRTUAL"></a>
+				 </li>
+				 <li class="nav-item">
+				   <a class="nav-link" href="http://mail.espol.edu.ec" aria-label="link Mail ESPOL" target="_blank">
+				   <img id="ico-mail" src="https://www.espol.edu.ec/sites/default/files/d9/icono_correo.svg" width="16" height="16" alt="Mail ESPOL"></a>
+				 </li>
+	 
+				 <li class="nav-item">
+	 
+								   <div class="gva-search-region">
+					   <a class="btn btn-light search-ico">
+						 <i class="fas fa-search"></i>
+					   </a>
+					   <a class="btn btn-light delete-search d-none">
+						 <i>
+						   <svg id="close_menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 17.578 17.578" class=" menu-icono">
+							 <g id="circle-x" transform="translate(-28.586 -2.78)">
+							   <path id="Trazado_216" data-name="Trazado 216" d="M23.75,23.75,9,9M23.75,9,9,23.75" transform="translate(21 -4.806)" fill="#223265" stroke="#223265" stroke-linecap="round" stroke-width="2"></path>
+							 </g>
+						   </svg>
+						 </i>
+					   </a>
+					   <div class="search-content ">
+						 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'region' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* region--search.html.twig
+		x region.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+	   <div>
+		 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'block' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* block--gavias-edupia-search-form-narrow.html.twig
+		x block--search-form-block.html.twig
+		* block--search.html.twig
+		* block.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/block/block--search-form-block.html.twig' -->
+	 <div class="search-block-form block block-search container-inline" data-drupal-selector="search-block-form" id="block-gavias-edupia-search-form-narrow" role="search">
+	   
+		 
+		   
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'form' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		x form--search-block-form.html.twig
+		* form.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/block/form--search-block-form.html.twig' -->
+	 <form action="/es/admision/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form">
+	   
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'form_element' -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+	 <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+		   
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'form_element_label' -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+	 <label for="edit-keys" class="visually-hidden">Buscar</label>
+	 <!-- END OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+	 
+	 
+			 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'input__search' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* input--search.html.twig
+		x input.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 <input title="Escriba lo que quiere buscar." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search">
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 
+	 
+			 </div>
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+	 
+	 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'container' -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/container.html.twig' -->
+	 <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'input__submit' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* input--submit.html.twig
+		x input.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 <input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Buscar">
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 
+	 </div>
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/container.html.twig' -->
+	 
+	 
+	 </form>
+	 
+	 <!-- END OUTPUT from 'themes/gavias_edupia/templates/block/form--search-block-form.html.twig' -->
+	 
+	 
+	   </div>
+	 
+	 <!-- END OUTPUT from 'themes/gavias_edupia/templates/block/block--search-form-block.html.twig' -->
+	 
+	 
+	   </div>
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+	 
+	 
+					   </div>
+					 </div>
+							   </li>
+			   </ul>
+			 </div>
+		   </nav>
+		 </div>
+	   </div>
+	 </div>
+		   
+		</div></div>
+	 
+		<nav class="d-sm-block d-lg-none menu-movil " id="menu-movil">
+		 <div class="container-fluid view-movil">
+		   <div class="row">
+			 <div class="col-8 mt-2 py-2">
+			   <a class="nav-link" href="/es/admision/" title="Inicio" rel="home" aria-label="ESPOL principal">
+				 <i>
+				   <svg id="logo-admisiones-espol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 77.28" width="120px">
+					 <defs><style>.cls-1{fill:#223265;stroke-width:0px;}</style></defs>
+					 <path id="Trazado_3705" class="cls-1" d="M13.93,12.55h-6.37l-.83,2.28h-2.43L10.04.38h1.41l5.75,14.44h-2.44l-.83-2.28ZM13.23,10.6l-2.47-6.83-2.48,6.83h4.95Z"></path><g id="Grupo_1309"><path id="Trazado_3706" class="cls-1" d="M29.05.38v14.44h-2.03l-.05-1.31c-.76.97-1.94,1.53-3.18,1.49-2.38,0-4.43-2.03-4.43-4.72s2.05-4.7,4.43-4.7c1.19-.04,2.34.47,3.1,1.39V.38h2.15ZM26.99,10.28c-.02-1.51-1.26-2.73-2.77-2.71-1.51.02-2.73,1.26-2.71,2.77.02,1.5,1.24,2.71,2.75,2.71,1.51,0,2.74-1.23,2.74-2.74,0-.01,0-.02,0-.03"></path><path id="Trazado_3707" class="cls-1" d="M46.45,9.08v5.74h-2.14v-5.59c.04-.89-.65-1.64-1.54-1.68-.02,0-.04,0-.06,0-.92,0-1.66.76-1.65,1.68,0,.03,0,.06,0,.09v5.51h-2.14v-5.59c.04-.89-.64-1.64-1.53-1.68-.03,0-.05,0-.08,0-.91.01-1.64.76-1.63,1.67,0,.03,0,.06,0,.1v5.51h-2.14V5.77h2.14v.88c.53-.66,1.32-1.04,2.16-1.05,1.02.02,1.97.54,2.55,1.38.62-.87,1.63-1.39,2.7-1.38,1.85,0,3.36,1.5,3.36,3.36,0,.04,0,.08,0,.12"></path><path id="Trazado_3708" class="cls-1" d="M50.49,2.88c0-.71.57-1.28,1.28-1.28.71,0,1.28.57,1.28,1.28,0,.71-.57,1.28-1.28,1.28-.71,0-1.28-.57-1.28-1.28M50.7,5.77h2.13v9.05h-2.13V5.77Z"></path><path id="Trazado_3709" class="cls-1" d="M56.4,13.84l1.01-1.56c.78.61,1.73.97,2.72,1.01.92,0,1.51-.41,1.51-1.08,0-.8-.93-.96-2.06-1.28-1.32-.36-2.81-.83-2.81-2.6s1.63-2.73,3.52-2.73c1.12,0,2.21.32,3.15.92l-1.01,1.42c-.69-.45-1.48-.7-2.3-.73-.84,0-1.36.34-1.36.89,0,.77,1.06.96,2.18,1.25,1.48.38,2.74.95,2.74,2.7,0,1.89-1.42,2.95-3.57,2.95-1.32,0-2.62-.41-3.71-1.17"></path><path id="Trazado_3710" class="cls-1" d="M67.17,2.88c0-.71.57-1.28,1.28-1.28.71,0,1.28.57,1.28,1.28,0,.71-.57,1.28-1.28,1.28-.71,0-1.28-.57-1.28-1.28M67.39,5.77h2.13v9.05h-2.13V5.77Z"></path><path id="Trazado_3711" class="cls-1" d="M73.14,10.3c-.05-2.64,2.05-4.81,4.69-4.86,2.64-.05,4.81,2.05,4.86,4.69.05,2.64-2.05,4.81-4.69,4.86-.03,0-.05,0-.08,0-2.59.05-4.74-2.02-4.78-4.61,0-.03,0-.05,0-.08M80.6,10.3c.03-1.48-1.15-2.71-2.63-2.75-1.48-.03-2.71,1.15-2.75,2.63,0,.04,0,.08,0,.11-.03,1.48,1.15,2.71,2.63,2.75,1.48.03,2.71-1.15,2.75-2.63,0-.04,0-.08,0-.11"></path><path id="Trazado_3712" class="cls-1" d="M94.08,8.95v5.88h-2.14v-5.64c.02-.92-.71-1.67-1.63-1.69-.03,0-.05,0-.08,0-.94-.03-1.73.72-1.76,1.66,0,0,0,.01,0,.02v5.65h-2.14V5.77h2.14v.78c.63-.61,1.48-.96,2.36-.95,1.81.01,3.26,1.49,3.25,3.29,0,.02,0,.03,0,.05"></path><path id="Trazado_3713" class="cls-1" d="M106.92,10.66h-7.34c.08,1.44,1.27,2.57,2.72,2.56.99.02,1.92-.5,2.43-1.35l1.73.71c-.8,1.54-2.41,2.48-4.14,2.42-2.83,0-4.83-2.09-4.83-4.69-.02-2.58,2.06-4.69,4.64-4.71.04,0,.08,0,.13,0,2.49-.09,4.59,1.87,4.67,4.36,0,.08,0,.16,0,.25v.46ZM99.74,9.15h4.94c-.3-1.09-1.29-1.83-2.42-1.81-1.16-.03-2.19.71-2.53,1.81"></path><path id="Trazado_3714" class="cls-1" d="M109.55,13.84l1.01-1.56c.78.61,1.73.97,2.72,1.01.92,0,1.51-.41,1.51-1.08,0-.8-.93-.96-2.06-1.28-1.32-.36-2.81-.83-2.81-2.6s1.63-2.73,3.52-2.73c1.12,0,2.21.32,3.15.92l-1.01,1.42c-.69-.45-1.48-.7-2.3-.72-.84,0-1.36.34-1.36.89,0,.77,1.06.96,2.18,1.25,1.48.38,2.74.95,2.74,2.7,0,1.89-1.42,2.95-3.57,2.95-1.32,0-2.62-.41-3.71-1.17"></path><path id="Trazado_3715" class="cls-1" d="M143.37,20.92c-9.71,0-17.59,7.88-17.59,17.59s7.88,17.59,17.59,17.59,17.59-7.88,17.59-17.59h0c0-9.71-7.88-17.59-17.59-17.59M143.37,49.39c-6,0-10.87-4.87-10.87-10.87s4.87-10.87,10.87-10.87,10.87,4.87,10.87,10.87h0c0,6.01-4.87,10.87-10.87,10.87h0"></path><path id="Trazado_3716" class="cls-1" d="M101.15,20.98c-9.67,0-17.52,7.8-17.59,17.47h0v38.83h7.05s-.11-24.71,0-24.63c7.78,5.82,18.8,4.23,24.62-3.55,5.82-7.78,4.23-18.8-3.55-24.62-3.04-2.27-6.73-3.5-10.53-3.5M101.16,49.44c-6,0-10.87-4.87-10.87-10.87s4.87-10.87,10.87-10.87,10.87,4.87,10.87,10.87h0c0,6-4.87,10.87-10.87,10.87h0"></path><path id="Trazado_3718" class="cls-1" d="M186.07,49.26h0c-6.17,0-11.17-5-11.17-11.17V0h-6.91v38.1h0c0,9.97,8.08,18.05,18.05,18.06h3.06v-6.9h-3.03Z"></path><path id="Trazado_3719" class="cls-1" d="M71.35,26.23c-4.49-4.48-11.04-6.19-17.15-4.48-.47.13-5.13,1.65-7.71,4.51l-21.1,19.6c-1.19,1.1-2.25,2.13-3.76,2.79-1.51.68-3.17.97-4.82.87-2.6-.18-5.05-1.29-6.9-3.13-1.43-1.38-2.44-3.15-2.9-5.09h15.58l10.82-10.1c-1.02-1.86-2.7-4.26-3.42-4.97-6.88-6.86-18.02-6.84-24.88.04-6.86,6.88-6.84,18.02.04,24.88,4.49,4.48,11.05,6.19,17.15,4.48,2.91-.76,5.57-2.25,7.74-4.32l22.26-20.67c4.26-3.7,10.22-3.68,14.28.37,4.25,4.24,4.26,11.12.03,15.38-2.93,2.94-7.29,3.96-11.22,2.61l.03,6.95c9.52,1.93,18.8-4.23,20.73-13.76,1.17-5.79-.64-11.78-4.82-15.95M10.01,30.82c4.26-4.19,11.11-4.13,15.3.13.07.07.14.15.21.22l-4.31,3.92H7.34c.55-1.6,1.46-3.06,2.67-4.26"></path><path id="Trazado_3720" class="cls-1" d="M200,5.3c.08,3.01-2.29,5.51-5.3,5.6-3.01.08-5.51-2.29-5.6-5.3-.08-3.01,2.29-5.51,5.3-5.6.05,0,.11,0,.16,0,2.94-.06,5.37,2.28,5.43,5.22,0,.03,0,.05,0,.08M190.46,5.3c-.07,2.27,1.71,4.16,3.98,4.23.05,0,.11,0,.16,0,2.33,0,4.04-1.88,4.04-4.2s-1.71-4.27-4.07-4.27c-2.28,0-4.11,1.86-4.11,4.13,0,.03,0,.07,0,.1M193.73,8.08h-1.23V2.78c.67-.12,1.35-.17,2.04-.16.64-.05,1.28.08,1.84.39.34.29.53.72.51,1.16-.05.61-.5,1.11-1.1,1.23v.06c.51.19.81.58.97,1.29.05.46.18.91.39,1.32h-1.33c-.2-.41-.35-.84-.42-1.29-.1-.58-.42-.84-1.1-.84h-.58v2.13ZM193.76,5.08h.58c.68,0,1.23-.23,1.23-.78,0-.49-.36-.81-1.13-.81-.23,0-.46.02-.68.06v1.52Z"></path></g></svg>
+				 </i>
+			   </a> 
+			 </div>
+			 <div class="col-3 d-flex justify-content-end align-items-end mt-2">
+			   <button id="btn-menu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				 <svg id="close_menu-movil" xmlns="http://www.w3.org/2000/svg" width="17.578" height="17.578" viewBox="0 0 17.578 17.578" class="d-none menu-icono">
+				   <g id="circle-x" transform="translate(-28.586 -2.78)">
+					 <path id="Trazado_216" data-name="Trazado 216" d="M23.75,23.75,9,9M23.75,9,9,23.75" transform="translate(21 -4.806)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-width="2"></path>
+				   </g>
+				 </svg>
+				 <svg id="menu_despliega-movil" xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8" class="d-block menu-icono">
+				   <path id="two-line-horizontal" d="M5,9H19M5,15H19" transform="translate(-4 -8)" fill="#243363" stroke="#243363" stroke-linecap="round" stroke-width="2"></path>
+				 </svg>
+			   </button>
+			 </div>
+					   <div class="col-1 gva-search-region d-flex justify-content-end align-items-end">
+				 <a class="btn btn-light search-ico">
+				   <i class="fas fa-search"></i>
+				 </a>
+				 <a class="btn btn-light delete-search d-none">
+				   <i>
+					 <svg id="close-search-movil" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 17.578 17.578" class=" menu-icono">
+					   <g id="circle-x" transform="translate(-28.586 -2.78)">
+						 <path id="Trazado_216" data-name="Trazado 216" d="M23.75,23.75,9,9M23.75,9,9,23.75" transform="translate(21 -4.806)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-width="2"></path>
+					   </g>
+					 </svg>
+				   </i> 
+				 </a>
+				 <div class="search-content">  
+				   
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'region' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* region--search.html.twig
+		x region.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+	   <div>
+		 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'block' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* block--gavias-edupia-search-form-narrow.html.twig
+		x block--search-form-block.html.twig
+		* block--search.html.twig
+		* block.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/block/block--search-form-block.html.twig' -->
+	 <div class="search-block-form block block-search container-inline" data-drupal-selector="search-block-form" id="block-gavias-edupia-search-form-narrow" role="search">
+	   
+		 
+		   
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'form' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		x form--search-block-form.html.twig
+		* form.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/block/form--search-block-form.html.twig' -->
+	 <form action="/es/admision/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form">
+	   
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'form_element' -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+	 <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+		   
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'form_element_label' -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+	 <label for="edit-keys" class="visually-hidden">Buscar</label>
+	 <!-- END OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+	 
+	 
+			 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'input__search' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* input--search.html.twig
+		x input.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 <input title="Escriba lo que quiere buscar." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search">
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 
+	 
+			 </div>
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+	 
+	 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'container' -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/container.html.twig' -->
+	 <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'input__submit' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* input--submit.html.twig
+		x input.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 <input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Buscar">
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+	 
+	 </div>
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/container.html.twig' -->
+	 
+	 
+	 </form>
+	 
+	 <!-- END OUTPUT from 'themes/gavias_edupia/templates/block/form--search-block-form.html.twig' -->
+	 
+	 
+	   </div>
+	 
+	 <!-- END OUTPUT from 'themes/gavias_edupia/templates/block/block--search-form-block.html.twig' -->
+	 
+	 
+	   </div>
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+	 
+	 
+				 </div>  
+			   </div>
+				   </div>
+		   <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+			 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'region' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* region--main-menu.html.twig
+		x region.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+	   <div>
+		 
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'block' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		* block--gavias-edupia-main-menu.html.twig
+		* block--system-menu-block--main.html.twig
+		x block--system-menu-block.html.twig
+		* block--system.html.twig
+		* block.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/block/block--system-menu-block.html.twig' -->
+	 <nav role="navigation" id="block-gavias-edupia-main-menu" class="block block-menu navigation menu--main">
+			   
+	   
+		 
+	   <div class="block-content">
+					  
+	 
+	 <!-- THEME DEBUG -->
+	 <!-- THEME HOOK: 'menu__main' -->
+	 <!-- FILE NAME SUGGESTIONS:
+		x menu--main.html.twig
+		x menu--main.html.twig
+		* menu.html.twig
+	 -->
+	 <!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/navigation/menu--main.html.twig' -->
+	 
+	 <div class="gva-navigation">
+	 
+				   <ul class="clearfix gva_menu gva_menu_main"> 
+								   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="/es/admision/oferta-academica" class="menu-level-0">
+					 
+						 OFERTA ACADÉMICA
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item menu-item--expanded">
+	   
+	 
+					   <a href="" class="menu-level-0">
+					 
+						 PROCESO DE ACCESO
+						   <span class="icaret nav-plus gv-icon-161"></span>
+				 
+			 </a>
+			   
+									 <ul class="menu sub-menu level-1">
+								   
+		   
+		
+		   <li class="menu-item menu-item--expanded">
+	   
+	 
+					   <a href="" class="menu-level-1">
+					 
+						 Inscripción
+						   <span class="icaret nav-plus gv-icon-161"></span>
+				 
+			 </a>
+			   
+									   <ul class="menu sub-menu level-2">
+								   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/proceso-de-acceso" class="menu-level-2" target="_self">
+					 
+						 Proceso de Acceso
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/pregrado/examen-de-ingreso" class="menu-level-2">
+					 
+						 Examen de Ingreso
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/pregrado/postulacion" class="menu-level-2" target="_self">
+					 
+						 Postulación
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/pregrado/asignacion-de-cupos-y-aceptacion" class="menu-level-2" target="_self">
+					 
+						 Asignación de Cupos y Aceptación
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/pregrado/matricula-de-nivelacion" class="menu-level-2" target="_self">
+					 
+						 Matrícula de Nivelación
+				 
+			 </a>
+			   
+				   </li>
+			 </ul>
+	   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item menu-item--expanded">
+	   
+	 
+					   <a href="" class="menu-level-1" target="_self">
+					 
+						 Nivelación
+						   <span class="icaret nav-plus gv-icon-161"></span>
+				 
+			 </a>
+			   
+									   <ul class="menu sub-menu level-2">
+								   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/nivelacion" class="menu-level-2">
+					 
+						 Curso de Nivelación
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/nivelacion/calendario-de-actividades" class="menu-level-2" target="_self">
+					 
+						 Calendario de Actividades
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="/es/admision/nivelacion/politicas-de-calificacion" class="menu-level-2" target="_self">
+					 
+						 Políticas de Calificación
+				 
+			 </a>
+			   
+				   </li>
+			 </ul>
+	   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="https://postgrados.espol.edu.ec/programas" class="menu-level-1" target="_blank">
+					 
+						 Admisión Postgrado
+				 
+			 </a>
+			   
+				   </li>
+			 </ul>
+	   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item menu-item--expanded">
+	   
+	 
+					   <a href="" class="menu-level-0">
+					 
+						 RECURSOS
+						   <span class="icaret nav-plus gv-icon-161"></span>
+				 
+			 </a>
+			   
+									 <ul class="menu sub-menu level-1">
+								   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="/es/admision/nivelacion/programa-curricular" class="menu-level-1">
+					 
+						 Programa Curricular
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item menu-item--expanded">
+	   
+	 
+					   <a href="" class="menu-level-1">
+					 
+						 Plataformas
+						   <span class="icaret nav-plus gv-icon-161"></span>
+				 
+			 </a>
+			   
+									   <ul class="menu sub-menu level-2">
+								   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="https://admisionvirtual.espol.edu.ec/welcome.html" class="menu-level-2" target="_blank">
+					 
+						 Aula Virtual
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+						 <a href="https://academico.admision.espol.edu.ec" class="menu-level-2" target="_blank">
+					 
+						 Académico Admisiones
+				 
+			 </a>
+			   
+				   </li>
+			 </ul>
+	   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="/es/admision/certificados" class="menu-level-1">
+					 
+						 Certificados y Solicitudes
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="/es/admision/preguntas-frecuentes" class="menu-level-1">
+					 
+						 Preguntas Frecuentes
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="/es/admision/examenes-de-admision" class="menu-level-1">
+					 
+						 Repositorio de Exámenes
+				 
+			 </a>
+			   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="/es/admision/reglamento" class="menu-level-1">
+					 
+						 Reglamentos
+				 
+			 </a>
+			   
+				   </li>
+			 </ul>
+	   
+				   </li>
+							   
+		   
+		
+		   <li class="menu-item">
+	   
+	 
+					   <a href="/es/admision/contactanos" class="menu-level-0">
+					 
+						 CONTÁCTANOS
+				 
+			 </a>
+			   
+				   </li>
+			 </ul>
+	   
+	 
+	 </div>
+	 
+	 
+	 <!-- END OUTPUT from 'themes/gavias_edupia/templates/navigation/menu--main.html.twig' -->
+	 
+	 
+			 </div>  
+	 </nav>
+	 
+	 <!-- END OUTPUT from 'themes/gavias_edupia/templates/block/block--system-menu-block.html.twig' -->
+	 
+	 
+	   </div>
+	 
+	 <!-- END OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+	 
+	  
+			 <ul class="navbar-nav extra-menu">  
+			   <li class="nav-item">
+				 <a class="" href="https://www.espol.edu.ec" target="_blank">Ir a ESPOL</a>
+			   </li>
+			   <li class="nav-item">
+				 <a class="" href="https://www.academico.espol.edu.ec/" target="_blank">Académico</a>
+			   </li> 
+			 </ul>
+			 </div>
+	   
+		   </div>
+		 </nav></header>
+  <div role="main" class="main main-page">
+	
+		<div class="clearfix"></div>
+			
+
+					<div class="help show hidden">
+				<div class="container">
+					<div class="content-inner">
+						
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--help.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--gavias-edupia-messages.html.twig
+   x block--system-messages-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+<div data-drupal-messages-fallback="" class="hidden"></div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+
+
+					</div>
+				</div>
+			</div>
+		
+				
+		<div class="clearfix"></div>
+				
+		<div class="clearfix"></div>
+		
+		<div id="content" class="content content-full">
+			<div class="container-full container-bg">
+				 
+					<div class="content-main-inner">
+	<div class="gav-help-region">
+				<div class="container">
+					<div class="content-inner">
+						
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--help.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--gavias-edupia-messages.html.twig
+   x block--system-messages-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+<div data-drupal-messages-fallback="" class="hidden"></div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+
+
+					</div>
+				</div>
+			</div><div id="page-main-content" class="main-content">
+		<div class="main-content-inner">
+			
+							<div class="content-main">
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--content.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--gavias-edupia-content.html.twig
+   * block--system-main-block.html.twig
+   * block--system.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/block/block.html.twig' -->
+<div id="block-gavias-edupia-content" class="block block-system block-system-main-block no-title">
+  
+    
+      <div class="content block-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'node' -->
+<!-- FILE NAME SUGGESTIONS:
+   * node--1--full.html.twig
+   * node--1.html.twig
+   * node--page--full.html.twig
+   x node--page.html.twig
+   * node--full.html.twig
+   * node.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/node/node--page.html.twig' -->
+<!-- Start Display article for detail page -->
+
+<div data-history-node-id="1" class="node node--type-page node--view-mode-full">
+  <div class="node__content clearfix">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'links__node' -->
+<!-- FILE NAME SUGGESTIONS:
+   * links--node.html.twig
+   x links.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/navigation/links.html.twig' -->
+
+<!-- END OUTPUT from 'themes/gavias_edupia/templates/navigation/links.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--field-content-builder--full.html.twig
+   * field--node--field-content-builder--page.html.twig
+   * field--node--field-content-builder.html.twig
+   * field--node--page.html.twig
+   * field--field-content-builder.html.twig
+   * field--gavias-content-builder.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/gavias_edupia/templates/field.html.twig' -->
+
+            <div class="field field--name-field-content-builder field--type-gavias-content-builder field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'builder' -->
+<!-- BEGIN OUTPUT from 'modules/gavias_content_builder/templates/frontend/builder.html.twig' -->
+<div class="gavias-blockbuilder-content">
+   
+  <div class="gavias-builder--content">		<div class="gbb-row-wrapper">
+		  			  	<div class="inifondo row-space gbb-row  bg-size-cover " style="background-image:url('/assets/espol_addmisiones.webp'); background-repeat:no-repeat; background-position:center center">
+		    	<div class="bb-inner default">  
+		      	<div class="bb-container container">
+			        	<div class="row row-wrapper">
+									<div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12   ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	                       <div class="widget gsc-image text-none logo-intro">
+               <div class="widget-content">
+                   
+                    <img src="/assets/logo_admisiones_espol.svg" alt="">
+                                 </div>
+            </div>    
+         	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 block_text_slider_home text-right align-self-center ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	           <div class="column-content texto_home "><h1>Acceso a la ESPOL</h1>
+<h2>Somos la puerta de entrada a la mejor Universidad Pública del Ecuador</h2></div>         <style rel="stylesheet">
+            #button-nugrevyz9emq{color:#000;border-color:#000;}            #button-nugrevyz9emq:hover{}         </style>
+
+         <div class="clearfix"></div>
+         <a href="/es/admision/proceso-de-acceso" class="gsc-button boton_home  small " id="button-nugrevyz9emq">
+            Conviértete en el cambio         </a> 
+
+         	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 registro_senescyt  " style="background-color:#5c859b">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	           <div class="column-content poligono1__ "><p>Segunda Postulación</p>
+<p>&nbsp;</p>
+<p>27 ago. - 28 ago. de 2024</p></div>	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 registro_examen  " style="background-color:#0e8791">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	           <div class="column-content poligono2__ "><p>Segunda Asignación</p>
+<p>de Cupo</p>
+<p>29 ago. de 2024</p></div>	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 examen_ingreso  " style="background-color:#005ca6">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	           <div class="column-content poligono3__ "><p>Segunda Aceptación</p>
+<p>de Cupo</p>
+<p>30 ago. de 2024</p></div>	         </div>  
+	      </div>
+        
+	    </div>
+	   	     	 			</div>
+    				</div>
+  				</div>  
+			  				</div>  
+		</div>
+				<div class="gbb-row-wrapper">
+		  			  	<div class="div_contenedor_cifras gbb-row  bg-size-cover " style="background-color:#223265">
+		    	<div class="bb-inner remove_margin remove_padding remove_padding_col">  
+		      	<div class="bb-container container">
+			        	<div class="row row-wrapper">
+									<div class="gsc-column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col_title_cifras  ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	           <div class="column-content cifras_espol "><p style="text-align: center;">ESPOL en cifras</p></div>	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-6   ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	           	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-2 col-lg-2 col-md-2 col-sm-6 col-xs-6 col-cifras  ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	                                <div class="widget milestone-block icono1 position-icon-top text-dark wow fadeInUp animated" style="visibility: visible; opacity: 1; animation-name: fadeInUp;">
+                  
+               <div class="milestone-right">
+                  <div class="milestone-content"><p><img src="/assets/estudiantes_blanco.svg" alt="Estudiantes" width="899" height="741"></p></div>                  <div class="milestone-number-inner" style="color: #30426F;"><span class="milestone-number">8,114</span><span class="symbol"></span></div>
+                  <div class="milestone-text">Estudiantes </div>
+               </div>
+            </div>
+            
+         	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-2 col-lg-2 col-md-2 col-sm-6 col-xs-6 col-cifras  ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	                                <div class="widget milestone-block  position-icon-top text-dark wow fadeInUp animated" style="visibility: visible; opacity: 1; animation-name: fadeInUp;">
+                  
+               <div class="milestone-right">
+                  <div class="milestone-content"><p><img src="/assets/carreras_blanco.svg" alt="carreras" width="899" height="640"></p></div>                  <div class="milestone-number-inner"><span class="milestone-number">35</span><span class="symbol"></span></div>
+                  <div class="milestone-text">Carreras vigentes</div>
+               </div>
+            </div>
+            
+         	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-2 col-lg-2 col-md-2 col-sm-6 col-xs-6 col-cifras  ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	                                <div class="widget milestone-block  position-icon-top text-dark wow fadeInUp animated" style="visibility: visible; opacity: 1; animation-name: fadeInUp;">
+                  
+               <div class="milestone-right">
+                  <div class="milestone-content"><p><img src="/assets/acreditadas_blanco.svg" alt="Carreras acreditadas" width="899" height="899"></p></div>                  <div class="milestone-number-inner"><span class="milestone-number">13</span><span class="symbol"></span></div>
+                  <div class="milestone-text">Carreras Acreditadas <br> <strong>ABET</strong></div>
+               </div>
+            </div>
+            
+         	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-2 col-lg-2 col-md-2 col-sm-6 col-xs-6 col-cifras  ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	                                <div class="widget milestone-block  position-icon-top text-dark wow fadeInUp animated" style="visibility: visible; opacity: 1; animation-name: fadeInUp;">
+                  
+               <div class="milestone-right">
+                  <div class="milestone-content"><p><img src="/assets/acreeuro_blanco.svg" alt="Eur Ace" width="899" height="707"></p></div>                  <div class="milestone-number-inner"><span class="milestone-number">20</span><span class="symbol"></span></div>
+                  <div class="milestone-text">Carreras Acreditadas <br> <strong>EUR-ACE</strong></div>
+               </div>
+            </div>
+            
+         	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-12   ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	                                <div class="widget milestone-block  position-icon-top text-dark wow fadeInUp animated" style="visibility: visible; opacity: 1; animation-name: fadeInUp;">
+                  
+               <div class="milestone-right">
+                  <div class="milestone-content"><p><img src="/assets/acreditacion-rsb.svg" alt="RSB" width="899" height="700"></p></div>                  <div class="milestone-number-inner"><span class="milestone-number">1</span><span class="symbol"></span></div>
+                  <div class="milestone-text">Carrera Acreditada <br> <strong>RSB</strong></div>
+               </div>
+            </div>
+            
+         	         </div>  
+	      </div>
+        
+	    </div>
+	   		<div class="gsc-column col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-6   ">
+	      <div class="column-inner  bg-size-cover ">
+	         <div class="column-content-inner">
+	           	         </div>  
+	      </div>
+        
+	    </div>
+	   	     	 			</div>
+    				</div>
+  				</div>  
+			  				    <div style="background-repeat: no-repeat; background-position: center top; top: -40%;" class="gva-parallax-inner skrollable bg-size-cover skrollable-between" data-bottom-top="top: -40%;" data-top-bottom="top: 20%;"></div>
+			  			</div>  
+		</div>
+				
+				
+				
+				
+				
+				
+		</div>  
+ </div> 
+
+<!-- END OUTPUT from 'modules/gavias_content_builder/templates/frontend/builder.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/gavias_edupia/templates/field.html.twig' -->
+
+
+  </div>
+</div>
+
+
+<!-- END OUTPUT from 'themes/gavias_edupia/templates/node/node--page.html.twig' -->
+
+
     </div>
   </div>
+
+<!-- END OUTPUT from 'themes/gavias_edupia/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+
+
+				</div>
+			
+					</div>
+	</div>
+</div>
+
+					
+			</div>
+		</div>
+
+					<div class="highlighted area">
+				<div class="container">
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--highlighted.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+
+<!-- END OUTPUT from 'core/modules/system/templates/region.html.twig' -->
+
+
+				</div>
+			</div>
+		
+				
+		
+			</div>
   <router-outlet></router-outlet>
 </div>

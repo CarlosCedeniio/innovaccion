@@ -24,6 +24,10 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   public form: FormGroup;
   public messages: Array<Message> = [];
   private canSendMessage = true;
+  private conversation: Array<string> = ['Hola, soy <strong>Polibot</strong>! El asistente virtual de ESPOL 🐢🤖. Yo te puedo ayudar en todas tus consultas que tengas en tu proceso de admisión. <br> Quisieras tomar un test para conocer que carreras son las mejores para ti?',
+    'Genial! Pero antes puedes decirme tu nombre?',
+    'Un gusto conocerte <strong>Carlos</strong>, empecemos con el test! No te tomará mas de 5 minutos y podrás conocer cual de las <strong>33 carreras de ESPOL </strong> es la indicada para que estudies según tus gustos y aptitudes.<br> Empecemos!'
+    ]
 
   constructor(private formBuilder: FormBuilder){}
 
@@ -58,7 +62,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
 
     setTimeout(() => {
       this.messages.pop();
-      const botMessage: Message = {text: 'Hello! How can I help you?', type: MessageType.Bot};
+      const botMessage: Message = {text: this.conversation.pop(), type: MessageType.Bot};
       this.messages.push(botMessage);
       this.canSendMessage = true;
    }, 2000);

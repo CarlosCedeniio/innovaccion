@@ -1,17 +1,17 @@
-<form [formGroup]="form" class="chat-container">
-    <mat-card [ngClass]="display">
+<form [formGroup]="form" class="chat-container" style="z-index: 500;">
+    <mat-card [ngClass]="display" style="z-index: 500;">
         <mat-card-header class="chat-header">
             <img mat-card-avatar src="./assets/bot.png" class="chat-icon">
-            <mat-card-title class="chat-title">Chatbot</mat-card-title>
+            <mat-card-title class="chat-title">PoliBot</mat-card-title>
             <mat-card-subtitle class="chat-subtitle">
                 <div class="status-icon"></div>
-                <span>Online</span>
+                <span>En línea</span>
             </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content class="chat-content" #messageContainer>
             <div *ngFor="let message of messages" class="messages">
                 <div [ngClass]="'message ' + message.type">
-                    {{ message.text }}
+                    <p [innerHTML]="message.text"></p>
                 </div>
             </div>
         </mat-card-content>

@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: DisplayType.Fixed,
-    component: FixedChatComponent
+    component: CollapsibleChatComponent
   },
   {
     path: DisplayType.Collapsible,

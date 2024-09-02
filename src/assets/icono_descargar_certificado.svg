@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 29.5 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3d8bba;
+        stroke: #3d8bba;
+      }
+    </style>
+  </defs>
+  <g id="download">
+    <path id="Trazado_4387" data-name="Trazado 4387" class="cls-1" d="M1.6,16.4c.5,0,.9.4.9.9h0v4.4c0,1,.8,1.8,1.8,1.8h21.1c1,0,1.8-.8,1.8-1.8h0v-4.4c0-.5.4-.9.9-.9s.9.4.9.9v4.4c0,1.9-1.6,3.5-3.5,3.5H4.2c-1.9,0-3.5-1.6-3.5-3.5v-4.4c0-.5.4-.9.9-.9h0Z"/>
+    <path id="Trazado_4388" data-name="Trazado 4388" class="cls-1" d="M14.1,19.9c.3.3.9.3,1.2,0,0,0,0,0,0,0l5.3-5.3c.4-.3.4-.9,0-1.2-.3-.4-.9-.4-1.2,0,0,0,0,0,0,0l-3.8,3.8V1.7c0-.5-.4-.9-.9-.9s-.9.4-.9.9v15.4l-3.8-3.8c-.3-.3-.9-.3-1.2,0s-.3.9,0,1.2l5.3,5.3Z"/>
+  </g>
+</svg>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 185.5 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #27a9dd;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #e5317a;
+      }
+
+      .cls-3 {
+        fill: #ab3055;
+      }
+
+      .cls-4 {
+        fill: #e93c52;
+      }
+
+      .cls-5 {
+        fill: #137caa;
+      }
+
+      .cls-6 {
+        fill: #c99a48;
+      }
+
+      .cls-7 {
+        fill: #ff5138;
+      }
+
+      .cls-8 {
+        fill: #1860aa;
+      }
+
+      .cls-9 {
+        fill: #275c7c;
+      }
+
+      .cls-10 {
+        fill: #dcb54f;
+      }
+
+      .cls-11 {
+        fill: #f8cb38;
+      }
+
+      .cls-12 {
+        fill: #db5c46;
+      }
+
+      .cls-13 {
+        fill: #fbac42;
+      }
+
+      .cls-14 {
+        fill: #41c9e6;
+      }
+
+      .cls-15 {
+        fill: #252523;
+      }
+
+      .cls-16 {
+        fill: #508d59;
+      }
+
+      .cls-17 {
+        fill: #60ab50;
+      }
+
+      .cls-18 {
+        fill: #ce313f;
+      }
+
+      .cls-19 {
+        fill: #65c652;
+      }
+
+      .cls-20 {
+        fill: #fff;
+      }
+
+      .cls-21 {
+        fill: #e30427;
+      }
+
+      .cls-22 {
+        fill: #262624;
+      }
+
+      .cls-23 {
+        fill: #b70e80;
+      }
+    </style>
+  </defs>
+  <rect id="Rectángulo_1599" data-name="Rectángulo 1599" class="cls-22" x="73.2" y=".3" width="73" height="18.5"/>
+  <rect id="Rectángulo_1600" data-name="Rectángulo 1600" class="cls-15" x="73.2" y="20.9" width="92.5" height="18.5"/>
+  <g id="Grupo_1361" data-name="Grupo 1361">
+    <path id="Trazado_3988" data-name="Trazado 3988" class="cls-20" d="M75.8,23.2h2.7c3.2,0,4.8,1.2,4.8,3.6.1,1.5-.9,2.9-2.4,3.3l2.4,6.9h-1.7l-2.3-6.6c-.5,0-1.1,0-1.6,0h-.6v6.5h-1.5v-13.8ZM78.7,29.3c2,0,3.1-.8,3.1-2.4s-1-2.4-3.1-2.4h-1.3v4.8h1.3Z"/>
+    <path id="Trazado_3989" data-name="Trazado 3989" class="cls-20" d="M87.9,23.2h2.1l3.3,13.8h-1.6l-.9-4.1h-3.8l-.9,4.1h-1.5l3.3-13.8ZM90.5,31.7l-1.6-7.2-1.6,7.2h3.1Z"/>
+    <path id="Trazado_3990" data-name="Trazado 3990" class="cls-20" d="M96.4,24.3v12.7h-1.3v-13.8h2.2l3.1,7.8c.4,1.1.8,2.3,1.2,3.4,0-1-.1-2-.1-3v-8.3h1.3v13.8h-1.5l-3.8-9.6c-.5-1.1-.8-2.2-1.1-3.2h0Z"/>
+    <path id="Trazado_3991" data-name="Trazado 3991" class="cls-20" d="M105.7,23.2h1.6v7.4l4.4-7.4h1.5l-3,4.9,3.5,8.9h-1.7l-2.8-7.5-2,3.3v4.1h-1.5v-13.8h0Z"/>
+    <path id="Trazado_3992" data-name="Trazado 3992" class="cls-20" d="M115.2,23.2h1.5v13.8h-1.5v-13.8Z"/>
+    <path id="Trazado_3993" data-name="Trazado 3993" class="cls-20" d="M121,24.3v12.7h-1.3v-13.8h2.2l3.1,7.8c.4,1.1.8,2.3,1.2,3.4,0-1-.1-2-.1-3v-8.3h1.3v13.8h-1.5l-3.8-9.6c-.5-1.1-.8-2.2-1.1-3.2h0Z"/>
+    <path id="Trazado_3994" data-name="Trazado 3994" class="cls-20" d="M136.7,36.2c-.7.7-1.6,1.1-2.6,1.1-2.8,0-4.3-2.3-4.3-7s1.3-7.4,4.3-7.4,3.7,1.6,3.7,4.3h-1.5c-.1-2-.9-3.1-2.2-3.1-2,0-2.6,2-2.6,6.1s.8,5.8,2.8,5.8,2.2-.9,2.2-2.6v-1.6h-2.2v-1.2h3.6v6.5h-1.1l-.2-.8Z"/>
+    <path id="Trazado_3995" data-name="Trazado 3995" class="cls-20" d="M141.3,33.4c.1,1.8.8,2.7,2.4,2.7,1.2,0,2.2-.9,2.2-2,0,0,0-.2,0-.3,0-1.5-1.1-2.4-2.9-3.6-1.8-1.3-2.9-2.2-2.9-4.1,0-1.7,1.4-3.1,3.2-3.1,0,0,.1,0,.2,0,2.2,0,3.6,1.4,3.7,3.7h-1.4c-.1-1.7-.8-2.6-2.2-2.6-1,0-1.9.6-2,1.7,0,0,0,.2,0,.3,0,.6.3,1.2.7,1.6.9.8,1.8,1.4,2.8,2.1,1.6,1.2,2.4,2.3,2.4,3.9.1,1.9-1.3,3.5-3.2,3.6-.1,0-.3,0-.4,0-2.4,0-3.7-1.4-3.8-3.9h1.5Z"/>
+  </g>
+  <path id="Trazado_3996" data-name="Trazado 3996" class="cls-21" d="M17.2,60H6.4V8.3H.1V.2h23.5v8.1h-6.5v51.7Z"/>
+  <path id="Trazado_3997" data-name="Trazado 3997" class="cls-23" d="M35.9,30.9v29.1h-10.1V.2c0,0,10.1,0,10.1,0v22.6h2.7V.2h10.1v59.8h-10.1v-29.1h-2.7Z"/>
+  <path id="Trazado_3998" data-name="Trazado 3998" class="cls-8" d="M71.2,8.3h-9.6v15.3h8v7.3h-8v20.1h9.6v9h-20V.2h20.1v8.1Z"/>
+  <rect id="Rectángulo_1601" data-name="Rectángulo 1601" class="cls-4" x="73.2" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1602" data-name="Rectángulo 1602" class="cls-10" x="79.8" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1603" data-name="Rectángulo 1603" class="cls-17" x="86.4" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1604" data-name="Rectángulo 1604" class="cls-18" x="93" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1605" data-name="Rectángulo 1605" class="cls-7" x="99.6" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1606" data-name="Rectángulo 1606" class="cls-14" x="106.2" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1607" data-name="Rectángulo 1607" class="cls-11" x="112.8" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1608" data-name="Rectángulo 1608" class="cls-3" x="119.4" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1609" data-name="Rectángulo 1609" class="cls-12" x="126" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1610" data-name="Rectángulo 1610" class="cls-2" x="132.6" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1611" data-name="Rectángulo 1611" class="cls-13" x="139.3" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1612" data-name="Rectángulo 1612" class="cls-6" x="145.9" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1613" data-name="Rectángulo 1613" class="cls-16" x="152.5" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1614" data-name="Rectángulo 1614" class="cls-1" x="159.1" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1615" data-name="Rectángulo 1615" class="cls-19" x="165.7" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1616" data-name="Rectángulo 1616" class="cls-5" x="172.3" y="41.5" width="6.6" height="18.5"/>
+  <rect id="Rectángulo_1617" data-name="Rectángulo 1617" class="cls-9" x="178.9" y="41.5" width="6.6" height="18.5"/>
+  <g id="Grupo_1362" data-name="Grupo 1362">
+    <path id="Trazado_3999" data-name="Trazado 3999" class="cls-20" d="M77.4,2.5v14h-1.7V2.5h1.7Z"/>
+    <path id="Trazado_4000" data-name="Trazado 4000" class="cls-20" d="M88.6,10.7c0-2.6,0-5.2,0-6.7h0c-.5,2.5-1.7,8.1-2.8,12.5h-1.6c-.8-3.9-2-9.9-2.5-12.5h0c0,1.6.1,4.7.1,7.1v5.5h-1.6V2.5h2.6c1.1,4.3,2.1,9.4,2.4,11.2h0c.3-1.6,1.5-7.1,2.6-11.2h2.5v14h-1.7v-5.8h0Z"/>
+    <path id="Trazado_4001" data-name="Trazado 4001" class="cls-20" d="M92.9,2.5h3.7c2.2,0,3.8,1.4,3.8,3.9s-1.4,4.1-4,4.1h-1.8v6h-1.7V2.5h0ZM94.7,9.1h1.6c1.6,0,2.4-.9,2.4-2.6s-.8-2.5-2.3-2.5h-1.8v5.1h0Z"/>
+    <path id="Trazado_4002" data-name="Trazado 4002" class="cls-20" d="M102.9,12.3l-1,4.3h-1.7l3.4-14h2.2l3.4,14h-1.8l-1-4.3h-3.6,0ZM106.1,10.7c-.8-3.3-1.3-5.4-1.5-6.6h0c-.2,1.2-.7,3.7-1.4,6.6h2.9Z"/>
+    <path id="Trazado_4003" data-name="Trazado 4003" class="cls-20" d="M118.2,12.6c0,.8-.4,4.1-3.9,4.1s-4.1-3.9-4.1-7.3,1.1-7.1,4.3-7.1,3.6,3.2,3.7,4.1h-1.7c0-.5-.1-2.6-2-2.6s-2.4,2.8-2.4,5.6.3,5.8,2.3,5.8,2-2,2.1-2.6h1.7,0Z"/>
+    <path id="Trazado_4004" data-name="Trazado 4004" class="cls-20" d="M122.1,4.1h-3.1v-1.5h7.9v1.5h-3.1v12.5h-1.7V4.1Z"/>
+  </g>
+</svg>

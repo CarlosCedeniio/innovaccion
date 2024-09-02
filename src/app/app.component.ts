@@ -12,7 +12,7 @@ export class AppComponent {
   public email = environment.email;
   public copyEmail = false;
   public displayType = DisplayType;
-  public display = DisplayType.Fixed;
+  public display = DisplayType.Collapsible;
 
   constructor(private location: Location) {
     const path = this.location.path().split('/')[1];
