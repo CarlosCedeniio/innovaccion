@@ -24,10 +24,16 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   public form: FormGroup;
   public messages: Array<Message> = [];
   private canSendMessage = true;
-  private conversation: Array<string> = ['Hola, soy <strong>Polibot</strong>! El asistente virtual de ESPOL 🐢🤖. Yo te puedo ayudar en todas tus consultas que tengas en tu proceso de admisión. <br> Quisieras tomar un test para conocer que carreras son las mejores para ti?',
-    'Genial! Pero antes puedes decirme tu nombre?',
-    'Un gusto conocerte <strong>Carlos</strong>, empecemos con el test! No te tomará mas de 5 minutos y podrás conocer cual de las <strong>33 carreras de ESPOL </strong> es la indicada para que estudies según tus gustos y aptitudes.<br> Empecemos!'
-    ]
+  private conversation: Array<string> = ['Hola! Soy PoliBot, el asistente virtual de la ESPOL 🤖🐢 Estoy aquí para ayudarte en cualquier duda que tengas sobre el proceso de admisiones de la universidad. Para comenzar, quisieras tomar un breve test para conocer tus aptitudes y que carrera sería la mejor elección para ti? 😎',
+    'Perfecto! Me encantará guiarte por este camino académico 😬 <br> Empecemos, dime tu nombre, edad y en que año escolar te encuentras',
+    'Un gusto conocerte Adriana! <br> A continuación haré algunas preguntas y debes responder con un número del 1 al 5, donde 1 significa que no estas de acuerdo con el enunciado ❎ y 5 significa que estas totalmente de acuerdo ✅ <br> Deseas un ejemplo de respuesta o empezamos el test?' ,
+    'Muy bien! <br> 1. Me gusta descubrir el mundo y las distintas formas que hay para conservarlo <br> Recuerda: 1 no estoy de acuerdo, 3 neutro, 5 totalmente de acuerdo💡',
+'2. Cuando un equipo eléctrico se daña en la casa, no me da miedo intentar repararlo',
+' 3. Uso herramientas tecnológicas y me gustaría  crear mis propias aplicaciones <br> Recuerda: 1 no estoy de acuerdo, 3 neutro, 5 totalmente de acuerdo 💡',
+'Ya casi acabamos! <br> 4. Me fascina como chatgpt resuelve muchas tareas y siento que es el futuro',
+'Perfecto!! Muchas gracias por tus respuestas 😎 <br> Según tus respuestas, tienes un perfil de innovador tecnológico 🌐 te gusta conocer como funcionan las cosas y consideras que las herramientas tecnológicas son el futuro. <br> Dicho esto, considero que las carreras que más encajan en tu perfil son las siguientes: <br> 1. Ingeniería Telemática: aprende a desarrollar dispositivos que cambian la vida de personas, casas inteligentes, negocios conectados a la nube, que la cafetera te hable? Eso no es nada. Estudia telematica y se parte del futuro de la tecnología <br> <br> 2. Ingeniería en ciencia de datos: aprende como se toman las decisiones en este mundo interconectado y a desarrollar herramientas de inteligencia artificial <br> Quieres conocer más sobre alguna de estas carreras? Preguntame sobre alguna y te daré más información. Sino te puedo seguir dando opciones',
+' Claro, te puedo dar más información sobre telemática 😎 es más, tengo un video preparado para ti <br> Da click en el siguiente enlace para verlo, cuando acabes puedes regresar y preguntarme más información sobre la carrera, sobre otras opciones, o sobre el proceso de admisión'
+  ]
 
   constructor(private formBuilder: FormBuilder){}
 
@@ -35,7 +41,10 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     this.form = this.formBuilder.group({
       message: ['']
     });
+    this.conversation = this.conversation.reverse()
     this.getBotMessage();
+
+
   }
 
   ngAfterViewChecked(): void {        

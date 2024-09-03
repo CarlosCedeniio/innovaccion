@@ -124,5 +124,7 @@
       }
     }
   },
-  "defaultProject": "angular-chatbot"
+  "defaultProject": "angular-chatbot",
+  "cli": {
+  }
 }
